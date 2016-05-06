@@ -4,13 +4,15 @@
     <title> Monkey Defense</title>
     <script src = "Boot.js"</script>
     <script src = "Preloader.js"</script>
+    <script src = "StartMenu.js"></script>
+    <script src = "Game.js"></script>
     <style>
-		body {
-			padding: 0;
-			margin: 0;
-			background-color: #33FF00;
-		}
-	</style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: #000000;
+        }
+    </style>
     
     
 </head>
@@ -18,17 +20,28 @@
 <body>
     <div id = "gameContainer"></div>
     <script type="text/javascript">
-        window.onload = function(){ 
-            var game = new Phaser.Game(540, 960, Phaser.AUTO, 'gameContainer');
-        game.state.add('Boot',MonkeyDefense.Boot);
-        game.state.add('Preloader',MonkeyDefense.Preloader);
+        
+        window.onload = function() {
+            var game = new Phaser.Game(540, 960, Phaser.AUTO, 'gamecontainer');
+            
+        game.state.add('Boot', MonkeyDefense.Boot);
+        
+        game.state.add('Preloader' , MonkeyDefense.Preloader);
+        
+        game.state.add('StartMenu', MonkeyDefense.StartMenu);
+            
+        game.state.add('Game', MonkeyDefense.Game);
+            
         game.state.start('Boot');
         };
+    </script>    
         
         
+       
     
+
     
-    </script> 
+</body>     
 
 
 
