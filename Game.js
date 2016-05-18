@@ -5,9 +5,11 @@ MonkeyDefense.Game = function (game) {
 
 MonkeyDefense.Game.prototype = {
     
-    creat: function () {
+    create: function () {
         this.gameover = false;
+        this.totalHero = 1;
         this.totalEnemy = 30;
+        
         this.buildWorld();
     },
     

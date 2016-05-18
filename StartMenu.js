@@ -1,7 +1,6 @@
 MonkeyDefense.StartMenu = function (game) {
     this.startBG;
     
-    
 };
 
 MonkeyDefense.StartMenu.prototype = {
